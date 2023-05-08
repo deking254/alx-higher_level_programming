@@ -12,7 +12,7 @@ if (list == NULL)
 return (0);
 else
 {
-while(tmp && temp)
+while(tmp && temp && temp->next)
 {
 if (tmp->next == temp->next->next)
 {
@@ -20,8 +20,8 @@ return (1);
 break;
 }
 else
-temp = temp->next->next;
 tmp = tmp->next;
+temp = temp->next->next;
 }
 }
 return (0);
