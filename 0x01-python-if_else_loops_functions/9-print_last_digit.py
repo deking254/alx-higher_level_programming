@@ -4,3 +4,5 @@ def print_last_digit(number):
         string = str(number)
         print(string[-1], end="")
         return int(string[-1])
+    else:
+        return None
