@@ -5,4 +5,4 @@ def print_last_digit(number):
         print(string[-1], end="")
         return int(string[-1])
     else:
-        return None
+        6 / 0
