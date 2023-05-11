@@ -1,1 +1,10 @@
-d
+#!/usr/bin/python3
+def magic_calculation_102(a, b):
+    from magic_calculation_102 import add, sub
+    if a < b:
+        for i in range(4, 6):
+            c = add(i, a)
+        return (c)
+    if a >= b:
+        return (sub(a, b))
+
