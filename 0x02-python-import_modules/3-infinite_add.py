@@ -8,4 +8,3 @@ if __name__ == '__main__':
         for arg in arguments:
             i += int(arg)
     print("{}".format(i))
-
