@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-letters = list(range(65, 91))
-print()
+import string
+print(string.ascii_uppercase)
