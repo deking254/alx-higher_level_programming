@@ -7,9 +7,9 @@ if __name__ == '__main__':
         print("{} arguments.".format(arguments))
     if arguments == 1:
         print("{} argument:".format(arguments))
-        print("{} {}".format(1, sys.argv[1]))
+        print("{}: {}".format(1, sys.argv[1]))
     if arguments > 1:
         print("{} arguments:".format(arguments))
         for argument in sys.argv[1:]:
-            print("{} {}".format(i, argument))
+            print("{}: {}".format(i, argument))
             i += 1
