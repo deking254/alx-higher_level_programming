@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    if matrix:
+    if matrix != [[]]:
         i = 0
         for mat in matrix:
             if len(mat) > 0:
@@ -12,3 +12,5 @@ def print_matrix_integer(matrix=[[]]):
                     else:
                         print("{:d}".format(ma))
                         i = 0
+    if matrix == [[]]:
+        print()
