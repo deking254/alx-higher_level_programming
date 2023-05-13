@@ -8,8 +8,10 @@ def delete_at(my_list=[], idx=0):
             for i in range(0, length - 1):
                 if i != idx:
                     newlist[j] = my_list[i]
+                else:
+                    newlist[j] = '\0'
                 j += 1
-            my_list = newlist
-            return (newlist)
+            my_list = []
+            return (my_list)
         else:
             return (my_list)
