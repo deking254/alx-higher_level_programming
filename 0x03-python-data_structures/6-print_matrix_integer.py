@@ -3,7 +3,7 @@ def print_matrix_integer(matrix=[[]]):
     if matrix:
         i = 0
         for mat in matrix:
-            if mat != [None]:
+            if len(mat) > 0:
                 for ma in mat:
                     leng = len(mat)
                     i += 1
