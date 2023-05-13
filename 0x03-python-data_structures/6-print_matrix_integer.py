@@ -4,7 +4,6 @@ def print_matrix_integer(matrix=[[]]):
         i = 0
         for mat in matrix:
             if mat != [None]:
-                print(mat)
                 for ma in mat:
                     leng = len(mat)
                     i += 1
