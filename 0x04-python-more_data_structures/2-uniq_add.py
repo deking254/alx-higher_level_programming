@@ -7,5 +7,3 @@ def uniq_add(my_list=[]):
             if my == my_list[i]:
                 my_list[i] = 0
     return (summation)
-
-
