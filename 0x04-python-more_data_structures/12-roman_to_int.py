@@ -17,5 +17,5 @@ def roman_to_int(roman_string):
              for num in arr:
                  total += num
              return (total)
-    elif len(roman_string) == 1:
+    if len(roman_string) == 1:
         return (romans.get(roman_string[0]))
