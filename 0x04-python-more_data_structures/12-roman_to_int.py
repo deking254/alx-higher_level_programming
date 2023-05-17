@@ -7,14 +7,14 @@ def roman_to_int(roman_string):
     else:
         arr = [None] * len(roman_string)
         if len(roman_string) > 1:
-                for i in range(0, len(roman_string)):
-                    arr[i] = romans.get(roman_string[i])
-                for r in range(0, len(roman_string)):
-                    if r != len(roman_string) - 1:
-                        if arr[r] < arr[r + 1]:
-                            arr[r] *= -1
-                for num in arr:
-                    total += num
-                return (total)
+            for i in range(0, len(roman_string)):
+                arr[i] = romans.get(roman_string[i])
+            for r in range(0, len(roman_string)):
+                if r != len(roman_string) - 1:
+                    if arr[r] < arr[r + 1]:
+                        arr[r] *= -1
+            for num in arr:
+                total += num
+            return (total)
         if len(roman_string) == 1:
             return (romans.get(roman_string[0]))
