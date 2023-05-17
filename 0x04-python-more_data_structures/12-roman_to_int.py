@@ -5,17 +5,4 @@ def roman_to_int(roman_string):
     arr = [None] * len(roman_string)
     if len(roman_string) > 1:
         if romans.get(roman_string[0]) < romans.get(roman_string[1]):
-            arr[0] = romans.get(roman_string[0]) * -1
-            for i in range(1, len(roman_string)):
-                arr[i] = romans.get(roman_string[i])
-            for num in arr:
-                total += num
             return (total)
-        else:
-             for i in range(0, len(roman_string)):
-                arr[i] = romans.get(roman_string[i])
-             for num in arr:
-                 total += num
-             return (total)
-    if len(roman_string) == 1:
-        return (romans.get(roman_string[0]))
