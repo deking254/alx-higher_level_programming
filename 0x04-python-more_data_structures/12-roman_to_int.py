@@ -6,3 +6,4 @@ def roman_to_int(roman_string):
     if len(roman_string) > 1:
         if romans.get(roman_string[0]) < romans.get(roman_string[1]):
             return (total)
+    return (0)
