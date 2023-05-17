@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def search_replace(my_list, search, replace):
-    leng = len (my_list)
+    leng = len(my_list)
     new = [None] * leng
     i = 0
     for my in my_list:
