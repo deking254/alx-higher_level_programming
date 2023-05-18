@@ -18,6 +18,8 @@ for (j = 0; j < ((PyVarObject *)(p))->ob_size; j++)
 {
 printf("Element %d: %s\n", j, lst->ob_item[j]->ob_type->tp_name);
 }
+if (PyBytes_Check(p))
+print_python_bytes(p);
 }
 /**
  * print_python_bytes - check the code
