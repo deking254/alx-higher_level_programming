@@ -13,6 +13,6 @@ def safe_print_list(my_list=[], x=0):
             else:
                 print(my_list[number], end="")
                 i += 1
-        except:
-            continue
+        except IndexError:
+            break
     return (i)
