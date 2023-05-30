@@ -1,10 +1,14 @@
 #!/usr/bin/python3
+"""This is a module for greeting and performing square calculations."""
 
 
 class Square:
+    """square class"""
     __size = None
     __position = None
+
     def __init__(self, size=0, position=(0, 0)):
+        """init func"""
         if type(size) is not int:
             raise TypeError("size must be an integer")
         if size < 0:
@@ -12,33 +16,45 @@ class Square:
         else:
             self.__position = position
             self.__size = size
+
     @property
     def size(self):
+        """size property"""
         return (self.__size)
+
     @size.setter
     def size(self, value):
+        """size setter"""
         if type(value) is not int:
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
+
     @property
     def position(self):
+        """position prop"""
         return (self.__position)
+
     @position.setter
     def position(self, value):
+        """position setter"""
         if type(value) is not tuple(2):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
+
     def area(self):
+        """area func"""
         return (self.__size ** 2)
+
     def my_print(self):
+        """print #"""
+        if self.__size == 0:
+            print("")
+        if self.__position[1] > 0:
+            print("")
         for _ in range(self.__size):
-            if self.__size == 0:
-                print(" " * self.__position[0], end="")
-                print("")
-            else:
-                print(" " * self.__position[0], end="")    
-                print("#" * self.__size)
+            print(" " * self.__position[0], end="")
+            print("#" * self.__size)
