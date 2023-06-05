@@ -9,39 +9,50 @@ import sys
 
 def n_queens(n):
     def is_safe(board, row, col):
-        # Check if there is a queen in the same column
+        """function to check for the suitability of the combinations"""
         for i in range(row):
-            if board[i] == col:
+            if board[i] == col or board[i] - i == col - row:
                 return False
-            # Check if there is a queen in the same diagonal
-            if abs(board[i] - col) == abs(i - row):
+            if board[i] + i == col + row:
                 return False
         return True
 
     def solve(board, row):
+        """solve is the function to create the number combinations"""
         if row == n:
-            # All queens have been placed
-            result.append(board.copy())
+            result.append(board[:])
             return
-
         for col in range(n):
             if is_safe(board, row, col):
-                # Place the queen and move to the next row
                 board[row] = col
                 solve(board, row + 1)
-                # Backtrack and try the next column
-                board[row] = -1
-
     result = []
     board = [-1] * n
     solve(board, 0)
-    print(result)
     return result
 
 
+def print_solutions(solutions):
+    """the function to convert the numbers to pairs"""
+    for solution in solutions:
+        pairs = []
+        for row, col in enumerate(solution):
+            pairs.append([row, col])
+        print(pairs)
+
+
 if __name__ == '__main__':
-    if int(sys.argv[1]) != 2:
+    if len(sys.argv) != 2:
         print("Usage: nqueens N")
         exit(1)
     else:
-        n_queens(int(sys.argv[1]))
+        try:
+            n = int(sys.argv[1])
+            if n < 4:
+                print("N must be at least 4")
+                exit(1)
+            else:
+                print_solutions(n_queens(n))
+        except Exception:
+            print("N must be a number")
+            exit(1)
