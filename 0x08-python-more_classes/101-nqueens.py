@@ -40,4 +40,8 @@ def n_queens(n):
 
 
 if __name__ == '__main__':
-    n_queens(int(sys.argv[1]))
+    if int(sys.argv[1]) != 2:
+        print("Usage: nqueens N")
+        exit(1)
+    else:
+        n_queens(int(sys.argv[1]))
