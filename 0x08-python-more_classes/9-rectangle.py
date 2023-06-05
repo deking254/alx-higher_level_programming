@@ -124,5 +124,4 @@ class Rectangle:
 
     @staticmethod
     def square(cls, size=0):
-        print(cls)
         return (Rectangle(cls, cls))
