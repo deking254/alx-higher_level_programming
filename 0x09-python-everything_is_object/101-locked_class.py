@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 class LockedClass:
-    first_name = None
+    def __init__(self):
+        type(self).first_name = None
