@@ -1,0 +1,17 @@
+>>> checker = __import__('0-main').checker
+>>> checker(1, 2)
+3
+>>> checker(100, -2)
+98
+>>> checker(2)
+100
+>>> checker(100.3, -2)
+98
+>>> checker(4, "School")
+b must be an integer
+>>> checker(None)
+a must be an integer
+>>> checker("f")
+a must be an integer
+>>> checker(7.8, 2)
+9

@@ -1,0 +1,9 @@
+>>> checker =  __import__('4-main').checker
+>>> checker("y")
+size must be an integer
+>>> checker(-4)
+size must be >= 0
+>>> checker(0.00)
+size must be an integer
+>>> checker(-0.9)
+size must be an integer
