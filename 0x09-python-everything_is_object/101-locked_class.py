@@ -8,4 +8,3 @@ class LockedClass:
     def __init__(self):
         """the init func"""
         self.first_name = "first_name"
-
