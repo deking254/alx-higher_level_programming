@@ -2,8 +2,6 @@
 LockedClass = __import__('101-locked_class').LockedClass
 
 lc = LockedClass()
-print("----")
-print(lc)
 lc.first_name = "John"
 try:
     lc.last_name = "Snow"
