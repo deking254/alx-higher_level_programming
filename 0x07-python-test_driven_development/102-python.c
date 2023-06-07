@@ -2,6 +2,16 @@
 #include <stdio.h>
 void print_python_string(PyObject *p)
 {
-printf("%s\n",p->ob_type->tp_name);
-write(1, "yugfhdghdghjjjftyjtj", 24);
+printf("[.] string object info\n");
+if (PyUnicode_Check(p))
+{
+if PyUnicode_IS_ASCII(p)
+printf("  type: compact ascii\n");
+else
+printf("  type: compact unicode object\n");
+printf("  length:  %ld\n", PyUnicode_GET_LENGTH(p));
+printf("  value:  %s\n", PyUnicode_AsUTF8(p));
+}
+else
+printf("  [ERROR] Invalid String Object\n");
 }
