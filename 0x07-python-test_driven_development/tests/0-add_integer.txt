@@ -1,1 +1,1 @@
->>> python3 -c 'print(__import__("0-add_integer").__doc__)' | wc -l
+>>> print(__import__("0-add_integer").__doc__)
