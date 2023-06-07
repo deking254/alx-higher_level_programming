@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-"""
-    Write a function
-    that divides 
-    all elements of a matrix
-"""
+"""Write a function that divides all elements of a matrix"""
 
 
 def matrix_divided(matrix, div):
@@ -13,17 +9,17 @@ def matrix_divided(matrix, div):
         raise TypeError(a)
     else:
         new = []
-        for l in matrix:
-            if type(l) is not list:
+        for lin in matrix:
+            if type(lin) is not list:
                 raise TypeError(a)
                 return
             else:
                 inner = []
                 length = len(matrix[0])
-                if len(l) != length:
+                if len(lin) != length:
                     raise TypeError(b)
                 else:
-                    for k in l:
+                    for k in lin:
                         if type(k) is not int and type(k) is not float:
                             raise TypeError(a)
                         else:
