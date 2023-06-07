@@ -7,10 +7,11 @@ def text_indentation(text):
     if type(text) is not str:
         raise TypeError("text must be a string")
     else:
-        mod = text.replace(". ", ".").replace(", ", ".").replace("? ", "?").replace(": ", ":")
-        for l in mod:
-            if l == "." or l == "?" or l == ":":
-                print(l)
+        mod = text.replace(". ", ".").replace(", ", ".")
+        mod = mod.replace("? ", "?").replace(": ", ":")
+        for lin in mod:
+            if lin == "." or lin == "?" or lin == ":":
+                print(lin)
                 print("")
             else:
-                print(l, end="")
+                print(lin, end="")
