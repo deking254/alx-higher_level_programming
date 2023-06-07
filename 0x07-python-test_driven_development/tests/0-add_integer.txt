@@ -1,4 +1,4 @@
->>> checker = __import__('0-main').checker
+>>> checker = __import__('0-checker').checker
 >>> checker(1, 2)
 3
 >>> checker(100, -2)
