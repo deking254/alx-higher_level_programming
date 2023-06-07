@@ -1,12 +1,9 @@
 #!/usr/bin/python3
-"""
-    a function
-    that multiplies 
-    2 matrices
-"""
+"""a function that multiplies 2 matrices"""
 
 
 def matrix_mul(m_a, m_b):
+    """a function that multiplies 2 matrices"""
     a = "m_a must be a list"
     b = "m_b must be a list"
     c = "m_a must be a list of lists"
