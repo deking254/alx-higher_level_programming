@@ -1,17 +1,9 @@
 #!/usr/bin/python3
-"""
-    a function that prints a 
-    text with 2 new lines 
-    after each of these 
-    characters: ., ? and :
-"""
+"""the function that prints the newline after the charaters stated"""
+
 
 def text_indentation(text):
-    """
-        the function that
-        prints the newline
-        after the charaters stated
-    """
+    """the function that prints the newline after the charaters stated"""
     if type(text) is not str:
         raise TypeError("text must be a string")
     else:

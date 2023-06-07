@@ -1,3 +1,2 @@
->>> checker = __import__('5-main').checker
->>> checker("Transfer idem ad modestiam vel temperantiam,")
-Transfer idem ad modestiam vel temperantiam,
+>>> print(__import__("5-text_indentation").__doc__)
+the function that prints the newline after the charaters stated
