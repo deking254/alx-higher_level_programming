@@ -1,1 +1,2 @@
-d
+>>> print(__import__("101-lazy_matrix_mul").__doc__)
+a function that multiplies 2 matrices by using the module NumPy
