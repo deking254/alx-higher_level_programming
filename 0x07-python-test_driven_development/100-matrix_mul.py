@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    a function 
+    a function
     that multiplies 
     2 matrices
 """
@@ -70,7 +70,7 @@ def matrix_mul(m_a, m_b):
                 for j in range(cols2):
                     result = 0
                     for k in range(cols1):
-                        result += m_a[i][k] *  m_b[k][j]
+                        result += m_a[i][k] * m_b[k][j]
                     inner.append(result)
                 new.append(inner)
             return (new)
