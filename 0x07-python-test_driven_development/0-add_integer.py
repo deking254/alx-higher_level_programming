@@ -1,14 +1,9 @@
 #!/usr/bin/python3
-"""
-    Write a function 
-    that adds 
-    2 integers
-"""
+"""Write a function that adds 2 integers"""
+
 
 def add_integer(a, b=98):
-    """
-    function that adds 2 integers
-    """
+    """function that adds 2 integers"""
     if type(a) is not int and type(a) is not float:
         raise TypeError("a must be an integer")
     else:
