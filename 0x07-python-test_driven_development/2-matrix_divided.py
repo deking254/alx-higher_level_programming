@@ -3,6 +3,7 @@
 
 
 def matrix_divided(matrix, div):
+    """Write a function that divides all elements of a matrix"""
     a = "matrix must be a matrix (list of lists) of integers/floats"
     b = "Each row of the matrix must have the same size"
     if type(matrix) is not list:
