@@ -1,2 +1,2 @@
->>> print(__import__("4-print_square").__doc__
+>>> print(__import__("4-print_square").__doc__)
 a function that prints a square with the character
