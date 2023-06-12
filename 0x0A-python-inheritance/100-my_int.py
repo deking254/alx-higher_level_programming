@@ -4,5 +4,11 @@
 
 class MyInt(int):
     """the class that implements in"""
-    def __init__(self, number):
-        self.numerator()
+
+    def __eq__(self, number):
+        """override this method to negate =="""
+        return not super().__eq__(number)
+
+    def __ne__(self, number):
+        """override this method to negate !="""
+        return not super().__ne__(number)
