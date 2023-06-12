@@ -10,7 +10,14 @@ class Rectangle(BaseGeometry):
 
     def __init__(self, width, height):
         """the init func"""
-        self.integer_validator("height", height)
-        self.integer_validator("width", width)
-        self._width = width
-        self._height = height
+        try:
+            self.integer_validator("height", height)
+            self._width = width
+            self._height = height
+        except Exception as e:
+            return
+        try:
+            self.integer_validator("width", width)
+            self._width = width
+        except Exception:
+            return
