@@ -1,0 +1,2 @@
+>>> print(__import__("7-base_geometry").__doc__)
+a class BaseGeometry based on 6-base_geometry

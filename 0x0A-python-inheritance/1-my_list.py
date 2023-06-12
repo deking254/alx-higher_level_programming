@@ -7,4 +7,3 @@ class MyList(list):
     def print_sorted(self):
         """a instance method that prints the list, but sorted"""
         print(sorted(self))
-
