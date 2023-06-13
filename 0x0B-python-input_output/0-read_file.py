@@ -4,6 +4,6 @@
 
 def read_file(filename=""):
     """the function itself"""
-    with open("my_file_0.txt", "r") as file:
-        ft = file.read()
+    with open(filename, 'r') as fil:
+        ft = fil.read()
         print(ft, end="")
