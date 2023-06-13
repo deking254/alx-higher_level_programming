@@ -15,22 +15,11 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        new = self.__dict__.copy()
-        found = []
+        di = self.__dict__
         if type(attrs) == list:
             for i in attrs:
-                status = 0
                 if type(i) != str:
                     return(self.__dict__)
-                else:
-                    for j in list(self.__dict__.keys()):
-                        if i == j:
-                            status = 1
-                    if (status == 1):
-                        found.append(i)
-            if len(found) != 0:
-                return {key: self.__dict__[key] for key in found}
-            else:
-                return(self.__dict__)
+            return {key: di[key] for key in attrs if key in di}
         else:
             return(self.__dict__)
