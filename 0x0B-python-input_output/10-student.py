@@ -25,10 +25,12 @@ class Student:
                 else:
                     for j in list(self.__dict__.keys()):
                         if i == j:
-                            status = 1;
+                            status = 1
                     if (status == 1):
                         found.append(i)
             if len(found) != 0:
                 return {key: self.__dict__[key] for key in found}
-        else:            
+            else:
+                return(self.__dict__)
+        else:
             return(self.__dict__)
