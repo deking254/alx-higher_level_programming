@@ -15,25 +15,17 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        new = self.__dict__.copy()
-        found = []
+        ne = self.__dict__
         if type(attrs) == list:
             for i in attrs:
-                status = 0
                 if type(i) != str:
                     return(self.__dict__)
-                else:
-                    for j in list(self.__dict__.keys()):
-                        if i == j:
-                            status = 1;
-                    if (status == 1):
-                        found.append(i)
-            if len(found) != 0:
-                return {key: self.__dict__[key] for key in found}
+            return {key: di[key] for key in attrs if key in di}
         else:
             return(self.__dict__)
 
     def reload_from_json(self, json):
         """replaces all attributes of the Student instance"""
-
-
+        self.first_name = json.get("first_name")
+        self.last_name = json.get("last_name")
+        self.age = json.get("age")
