@@ -12,7 +12,7 @@ class Base:
     def __init__(self, id=None):
         """the init func"""
         if id is not None:
-            self.id  = id
+            self.id = id
         else:
             Base.__nb_objects += 1
             self.id = self.__nb_objects
@@ -34,7 +34,7 @@ class Base:
                 fle.write(Base.to_json_string(lis))
         else:
             return (lis)
-        
+
     def from_json_string(json_string):
         """returns the list of the JSON string representation"""
         return (json.loads(json_string))
@@ -77,7 +77,7 @@ class Base:
                     return (ty)
             except FileExistsError:
                 return ([])
-    
+
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """dealing with csv"""
@@ -100,6 +100,6 @@ class Base:
                 rs = csv.reader(fl)
                 for h in rs:
                     return (h)
+
     def draw(list_rectangles, list_squares):
         """to draw thw circle"""
-
