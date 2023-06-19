@@ -33,7 +33,6 @@ class Square(Rectangle):
         """update the attributes"""
         status = 0
         if len(args) == 0:
-            print(list(kwargs.items()))
             for i in list(kwargs.items()):
                 if i[0] == "size":
                     self.width = i[1]
