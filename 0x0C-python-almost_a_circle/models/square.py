@@ -7,7 +7,7 @@ class Square(Rectangle):
     """the square class"""
     def __init__(self, size, x=0, y=0, id=None):
         """the init func"""
-        super().__init__(size, size, x, y, id)
+        super().__init__(size, size,  x, y, id)
 
     def __str__(self):
         """the tostring implementation"""
@@ -32,7 +32,8 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """update the attributes"""
         status = 0
-        if type(args) != tuple or len(args) == 0:
+        if len(args) == 0:
+            print(list(kwargs.items()))
             for i in list(kwargs.items()):
                 if i[0] == "size":
                     self.width = i[1]
@@ -43,18 +44,18 @@ class Square(Rectangle):
                     self.x = i[1]
                 if i[0] == "y":
                     self.y = i[1]
-            return
-        for j in args:
-            if status == 0:
-                self.id = j
-            if status == 1:
-                self.width = j
-                self.height = j
-            if status == 2:
-                self.x = j
-            if status == 4:
-                self.y = j
-            status += 1
+        if len(args) > 0:
+            for j in args:
+                if status == 0:
+                    self.id = j
+                if status == 1:
+                    self.width = j
+                    self.height = j
+                if status == 2:
+                    self.x = j
+                if status == 3:
+                    self.y = j
+                status += 1
 
     def to_dictionary(self):
         """get dict representation of class"""
