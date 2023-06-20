@@ -106,3 +106,22 @@ class Base:
 
     def draw(list_rectangles, list_squares):
         """to draw thw circle"""
+        t = turtle.Turtle()
+        t.screen.bgcolor("#b7312c")
+        t.pensize(2)
+        t.shape("turtle")
+
+        t.color("#ffffff")
+        for r in list_rectangles:
+            t.showturtle()
+            t.up()
+            t.goto(r.x, r.y)
+            t.down()
+            for i in range(2):
+                t.forward(r.width)
+                t.left(90)
+                t.forward(r.height)
+                t.left(90)
+            t.hideturtle()
+        t.color("#b5e3d8")
+        turtle.exitonclick()
