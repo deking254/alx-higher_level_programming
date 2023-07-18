@@ -102,4 +102,6 @@ class Base:
                     return (h)
     def draw(list_rectangles, list_squares):
         """to draw thw circle"""
-
+        ti = turtle.TK.Tk()
+        ti.title("Display Window")
+        ti.geometry("400x300")
