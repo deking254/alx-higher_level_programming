@@ -1,1 +1,1 @@
-d
+SELECT DATABASE();
