@@ -1,2 +1,2 @@
--- list all the databases
-SELECT DATABASE();
+-- list all the database
+SHOW DATABASES;
