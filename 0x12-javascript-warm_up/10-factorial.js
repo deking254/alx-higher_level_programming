@@ -11,4 +11,4 @@ function factorio (b) {
 if (process.argv[2]) {
   const e = parseInt(process.argv[2]);
   if (e) { factorio(e); }
-} else { console.log(a); }
+} else { console.log(1); }
