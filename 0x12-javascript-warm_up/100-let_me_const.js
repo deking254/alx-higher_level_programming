@@ -1,3 +1,5 @@
 #!/usr/bin/node
-const myVar = 333;
-module.exports = { myVar: 333 };
+function switche () {
+  this.myVar = 333;
+}
+module.exports = switche();
