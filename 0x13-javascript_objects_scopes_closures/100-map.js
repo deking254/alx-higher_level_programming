@@ -13,5 +13,6 @@ if (lst) {
       lo.n++;
       return (item * lo.n);
     }
+    return (item);
   }));
 }
