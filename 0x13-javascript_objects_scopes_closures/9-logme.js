@@ -1,7 +1,7 @@
 #!/usr/bin/node
 class Log {
   constructor () {
-    this.n = 0;
+    this.n = -1;
   }
 }
 const logg = new Log();
