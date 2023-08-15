@@ -13,7 +13,7 @@ exports.esrever = function (list) {
       end--;
     }
   } else {
-    while ((end - start) !== 1) {
+    while ((end - start) >= 1) {
       const a = list[start];
       const b = list[end];
       list[start] = b;
