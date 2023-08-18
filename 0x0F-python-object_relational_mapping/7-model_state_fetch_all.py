@@ -6,7 +6,7 @@ from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
-    query = 'mysql+mysqldb://{}:{}@localhost/{}?charset=latin1'
+    query = 'mysql+mysqldb://{}:{}@localhost/{}'
     a = sys.argv[1]
     b = sys.argv[2]
     c = sys.argv[3]
@@ -16,5 +16,5 @@ if __name__ == "__main__":
     se = Session()
     rt = se.query(State).order_by(State.id).all()
     for r in rt:
-        print("{}. {}".format(r.id, r.name))
+        print("{}: {}".format(r.id, r.name))
     se.close()
