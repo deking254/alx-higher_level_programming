@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-from sqlalchemy import Column, Integer, String, ForeignKey;
-from sqlalchemy.orm import relationship;
+"""Improve the files model_city.py and model_state.py"""
+from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy.orm import relationship
 from relationship_state import Base
-import MySQLdb;
+import MySQLdb
+
 
 class City(Base):
+    """the class for the city relationship class"""
     __tablename__ = "cities"
     id = Column(Integer, primary_key=True)
     name = Column(String(128))
