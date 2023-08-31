@@ -1,3 +1,3 @@
 #!/bin/bash
 #returns status code
-curl -sw "%{http_code}" $1
+curl -s --output dev/null -w %{response_code} $1
