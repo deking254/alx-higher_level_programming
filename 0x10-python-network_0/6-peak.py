@@ -1,1 +1,1 @@
-d
+#!/usr/bin/python3
