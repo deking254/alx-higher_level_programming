@@ -1,3 +1,3 @@
 #!/bin/bash
 #upload a json
-curl -sX POST -d @$1 $2
+curl -s --json @$2 $1
