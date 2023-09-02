@@ -5,13 +5,16 @@ import sys
 
 if __name__ == "__main__":
     payload = dict(Authorization="Bearer " + sys.argv[2])
-    url = 'https://api.github.com/users/'
-    with requests.get(url + sys.argv[1], payload) as res:
+    url = 'https://api.github.com/users/' + sys.argv[1]
+    with requests.get(url, headers=payload) as res:
         try:
             j = res.json()
             if j:
-                print(j.get('id'))
+                if j.get("message") == 'Bad credentials':
+                    print(None)
+                else:
+                    print(j.get('id'))
             else:
                 print(None)
-        except Exception:
+        except ValueError:
             pass
