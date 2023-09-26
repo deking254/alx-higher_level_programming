@@ -10,7 +10,7 @@ req.get(url, (error, response) => {
   } else {
     const res = JSON.parse(response.body);
     films = res.results;
-    const person = 'https://swapi-api.alx-tools.com/api/people/' + id + '/';
+    const person = 'https://swapi-api.alx-tools.com/api/people/films/18/';
     for (i in films) {
       const film = films[i];
       for (j in film.characters) {
