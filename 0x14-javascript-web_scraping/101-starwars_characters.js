@@ -6,14 +6,19 @@ const id = process.argv[2];
 let characters, i;
 
 async function makeGetRequest (url) {
-  const response = await requestPromise(url);
-  if (response.statusCode !== 200) {
-    throw new Error(`HTTP Status Code: ${response.statusCode}`);
+  try {
+    const response = await requestPromise(url);
+    if (response.statusCode !== 200) {
+      throw new Error(`HTTP Status Code: ${response.statusCode}`);
+    }
+    const responseBody = response.body;
+    return responseBody;
+  } catch (error) {
+
   }
-  const responseBody = response.body;
-  return responseBody;
 }
 const movies = 'https://swapi-api.alx-tools.com/api/films/' + id + '/';
+
 req.get(movies, (error, data) => {
   if (error) {
     console.log(error);
